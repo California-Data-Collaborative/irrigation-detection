@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "irrigation-detection"
+version = "0.1.0"
+description = "Detect outdoor irrigation from hourly smart water meter data"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "California Data Collaborative" },
+]
+keywords = ["irrigation", "water", "AMI", "smart-meter", "deep-learning"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "torch>=2.0",
+    "pandas>=2.0",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.4",
+]
+parquet = [
+    "pyarrow>=14.0",
+]
+
+[project.scripts]
+irrigation-detect = "irrigation_detection.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

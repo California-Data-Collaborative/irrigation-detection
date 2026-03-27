@@ -1,0 +1,11 @@
+.git
+.gitignore
+.venv
+venv
+__pycache__
+*.egg-info
+output/
+secrets/
+.env
+*.md
+!README.md

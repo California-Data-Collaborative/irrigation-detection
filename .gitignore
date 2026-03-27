@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project-specific
+output/
+*.csv
+!examples/*.csv
+
+# Models (large binary files — use Git LFS or download separately)
+models/*.pth
+models/*.pt
+
+# Secrets (never commit these)
+secrets/
+.env
+*.p8
+*.pem

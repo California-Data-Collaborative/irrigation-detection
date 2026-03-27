@@ -1,0 +1,14 @@
+services:
+  detect:
+    build: .
+    volumes:
+      - ./data:/app/data:ro
+      - ./models:/app/models:ro
+      - ./output:/app/output
+    command:
+      - --input
+      - /app/data/readings.csv
+      - --model
+      - /app/models/best_irrigation_model_336h.pth
+      - --output
+      - /app/output/results.csv
